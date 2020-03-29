@@ -1,0 +1,16 @@
+<!--<Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button> -->
+<ActionBar title="Home">
+</ActionBar>
+<FlexboxLayout class="page">
+    <StackLayout class="form" backgroundColor="lightgray">
+        <GridLayout rows="auto,auto">
+            <StackLayout row="0" class="input-field">
+                <TextField class="input" hint="Buscar" keyboardType="buscar"
+                    autocorrect="false" autocapitalizationType="none">
+                </TextField>
+                <Button text="Buscar" class="btn btn-primary"></Button> 
+            </StackLayout>
+        </GridLayout>
+        <Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button> 
+    </StackLayout>
+</FlexboxLayout>
