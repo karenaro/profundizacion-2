@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterExtensions} from "nativescript-angular/router";
 import { User } from "../model/user";
 import { LoginService } from "../shared/login.service"
+import { setString } from "tns-core-modules/application-settings";
 
 
 @Component({
@@ -23,17 +24,18 @@ export class LoginComponent implements OnInit {
     if(!this.user.email || !this.user.password){
       this.alert("correo y/o contraseña incorrectos");
       return
+     
     }
-    /*
-    this.loginService.autenticar({correo:this.user.email, password:this.user.password}).subscribe((result)=>{
+    console.log(this.user)
+    this.loginService.autenticar({email:this.user.email, password:this.user.password}).subscribe((result)=>{
       console.log(result);
       this.routerExtensions.navigate(["/home"],{clearHistory: true});
     }, (error) =>{
-      //console.log(error);
+      console.log(error);
       this.alert(error.error.message);
     });
-    */
-   this.routerExtensions.navigate(["/home"],{clearHistory: true});
+    
+   //this.routerExtensions.navigate(["/home"],{clearHistory: true});
 
   }
 

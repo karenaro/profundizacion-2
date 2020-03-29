@@ -1,21 +1,28 @@
 <!--<Button text="Ingresar" (tap)="ingresar()" class="btn btn-primary"></Button>-->
 
-<FlexboxLayout class="page">
-    <StackLayout class="form" backgroundColor="lightgray">
-        <GridLayout rows="auto,auto">
-            <StackLayout row="0" class="input-field">
-                <TextField class="input" hint="Email" keyboardType="email"
-                    autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email"
-                   >
-                </TextField>
-            </StackLayout>
-            <StackLayout row="1" class="input-field">
-                <TextField secure="true" class="input" hint="Password" 
-                autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.password" >
-                </TextField>
-            </StackLayout>
+<ActionBar title="Inicia session" android.icon="res://icon" android.iconVisibility="always">
+</ActionBar>
 
-        </GridLayout>
-        <Button text="Ingresar" (tap)="ingresar()" class="btn btn-primary"></Button>
-    </StackLayout>
-</FlexboxLayout>
+<GridLayout backgroundColor="#CCCCCC">
+    <ScrollView>
+        <StackLayout margin="10" verticalAlignment="center">
+            <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
+                <GridLayout rows="auto,auto">
+                    <StackLayout row="0" class="input-field">
+                        <TextField class="input" hint="Email" keyboardType="email"
+                            autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email"
+                        >
+                        </TextField>
+                    </StackLayout>
+                    <StackLayout row="1" class="input-field">
+                        <TextField secure="true" class="input" hint="Password" 
+                        autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.password" >
+                        </TextField>
+                    </StackLayout>
+                </GridLayout>
+                <Button text="Ingresar" (tap)="ingresar()" class="btn btn-primary"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
+

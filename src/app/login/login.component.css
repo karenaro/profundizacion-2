@@ -1,1 +1,10 @@
 /* Add mobile styles for the component here.  */
+#login{
+    background-image: url('../../../App_Resources/Android/src/main/res/drawable-hdpi/fondo.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+
+
+}
+

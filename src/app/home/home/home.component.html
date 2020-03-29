@@ -1,16 +1,22 @@
 <!--<Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button> -->
+
+
 <ActionBar title="Home">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" 
+    (tap)="salir()"></NavigationButton>
 </ActionBar>
-<FlexboxLayout class="page">
-    <StackLayout class="form" backgroundColor="lightgray">
-        <GridLayout rows="auto,auto">
-            <StackLayout row="0" class="input-field">
-                <TextField class="input" hint="Buscar" keyboardType="buscar"
-                    autocorrect="false" autocapitalizationType="none">
-                </TextField>
+
+<GridLayout backgroundColor="#CCCCCC">
+    <ScrollView>
+        <StackLayout margin="10" verticalAlignment="center">
+            <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
+                <StackLayout class="input-field">
+                    <Label text="Buscar" class="label font-weight-bold m-b-5"></Label>
+                    <TextField class="input" ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
                 <Button text="Buscar" class="btn btn-primary"></Button> 
             </StackLayout>
-        </GridLayout>
-        <Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button> 
-    </StackLayout>
-</FlexboxLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>   
