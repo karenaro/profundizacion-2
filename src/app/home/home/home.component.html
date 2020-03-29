@@ -1,22 +1,42 @@
 <!--<Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button> -->
 
 
-<ActionBar title="Home">
+<ActionBar title="Mascotas Home">
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" 
     (tap)="salir()"></NavigationButton>
 </ActionBar>
 
+<GridLayout>
+    <ListView [items]="mascota">
+        <ng-template let-item="item">            
+            <StackLayout>
+                <Label [text]="item.tipoMascota"></Label>
+                <Label [text]="item.nacimiento"></Label>
+                <Label [text]="item.propietario"></Label>
+            </StackLayout>        
+        </ng-template>
+    </ListView>
+    <Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button>
+</GridLayout>
+<!--
 <GridLayout backgroundColor="#CCCCCC">
     <ScrollView>
-        <StackLayout margin="10" verticalAlignment="center">
-            <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
-                <StackLayout class="input-field">
-                    <Label text="Buscar" class="label font-weight-bold m-b-5"></Label>
-                    <TextField class="input" ></TextField>
-                    <StackLayout class="hr-light"></StackLayout>
-                </StackLayout>
-                <Button text="Buscar" class="btn btn-primary"></Button> 
-            </StackLayout>
+        <StackLayout margin="20" verticalAlignment="center" class="form" 
+        padding="15" backgroundColor="#FFFFFF"> 
+            <ListView [items]="animales" class="picker">
+                <ng-template let-item="item">            
+                    <StackLayout>
+                        <Label [text]="item.codigo"></Label>
+                        <Label [text]="item.tipoMascota"></Label>
+                        <Label [text]="item.nacimiento"></Label>
+                        <Label [text]="item.propietario"></Label>
+                        <Label [text]="item.vacuna"></Label>
+                    </StackLayout>        
+                </ng-template>
+            </ListView>
+            <Button text="Buscar" class="btn btn-primary"></Button> 
         </StackLayout>
     </ScrollView>
 </GridLayout>   
+   
+-->
