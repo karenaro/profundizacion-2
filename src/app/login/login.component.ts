@@ -17,24 +17,25 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.user.email ="itaangel35@hotmail.com";
+    this.user.password = "123456789";
   }
 
   ingresar(){
 
     if(!this.user.email || !this.user.password){
       this.alert("correo y/o contraseña incorrectos");
-      return
-    }
-    //console.log(this.user)
-    this.loginService.autenticar({email:this.user.email, password:this.user.password})
-    .subscribe((result: any)=>{
-      //console.log(result);
-      //console.log(result.token.access_token);
-      //console.log(JSON.parse(result.toString()).token.access_token);
-      setString("token", result.token.access_token);
+      return;
+    }    
+    
+    this.loginService.autenticar({email: this.user.email,password: this.user.password})
+    .subscribe((result:any)=>{
+      //console.log(result);      
+      setString("token", result.token);
+      this.alert(result.token);
       this.routerExtensions.navigate(["/home"],{clearHistory: true});
     }, (error) =>{
-      //console.log(error);
+      console.log(error)
       this.alert(error.error.message);
       //this.routerExtensions.navigate(["/login"],{clearHistory: true});
     });

@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class LoginService {
   private serverUrl= "https://controlmascota.herokuapp.com"; 
-  private token : string;
+  private token:string;
 
   constructor( private http: HttpClient) { }
 
@@ -19,10 +19,11 @@ export class LoginService {
     return headers;
   }
 
-  autenticar(data:any){
+  autenticar(data:any){    
     let headers = new HttpHeaders({
     "Content-Type" : "application/json"
     });
+    
     return this.http.post(this.serverUrl +"/signin",data,{headers: headers});
     console.log(this.serverUrl +"/signin")
 

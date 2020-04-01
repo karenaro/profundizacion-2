@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private routerExtensions:RouterExtensions, private mascotaService: MascotaService) { }
   mascota: Array<Mascota>;
   ngOnInit(): void {
+    /*
     this.mascotaService.getMascotas().subscribe((result:any)=>{
       console.log(result);
       this.mascota= result.mascota;
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
       //console.log(error);
       this.alert(error.error.message);
     });
+    */
   }
 
   salir(){
