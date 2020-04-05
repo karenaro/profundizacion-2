@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
  import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
+import { CamaraComponent } from './camara/camara.component';
+
 
 @NgModule({
     bootstrap: [
@@ -26,7 +28,9 @@ import { LoginComponent } from './login/login.component';
         AppComponent,
         ItemsComponent,
         ItemDetailComponent,
-        LoginComponent
+        LoginComponent,
+        CamaraComponent
+        
     ],
     providers: [],
     schemas: [

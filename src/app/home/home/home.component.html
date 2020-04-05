@@ -2,8 +2,20 @@
 
 
 <ActionBar title="Mascotas Home">
-    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" 
-    (tap)="salir()"></NavigationButton>
+    <ActionItem
+    android.systemIcon="ic_menu_camera"
+    android.position = "left"
+    (tap) = "irCamara()" text = "Camara">
+    </ActionItem>
+
+    <ActionItem
+    android.systemIcon="ic_lock_power_off"
+    android.position = "right"
+    (tap) = "salir()" text = "Salir">
+    </ActionItem>
+
+    
+
 </ActionBar>
 
 <GridLayout>
@@ -13,11 +25,14 @@
                 <Label [text]="item.tipoMascota"></Label>
                 <Label [text]="item.nacimiento"></Label>
                 <Label [text]="item.propietario"></Label>
+                <Button text="foto" (tap)="goToCamara()" class="btn btn-primary"></Button>
             </StackLayout>        
         </ng-template>
     </ListView>
     <Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button>
 </GridLayout>
+
+
 <!--
 <GridLayout backgroundColor="#CCCCCC">
     <ScrollView>
