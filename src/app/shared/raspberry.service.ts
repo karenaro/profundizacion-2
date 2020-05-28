@@ -19,12 +19,12 @@ export class RaspberryService {
   }
 
   public on(){
-      let url = this.dataplicityUrl + "/led/red"
+      let url = this.dataplicityUrl + "/led/red/"
       return this.http.post(url,{"state":"1"},{headers: this.crearRequestHeaders()})
   }
 
   public off(){
-    let url = this.dataplicityUrl + "/led/red"
+    let url = this.dataplicityUrl + "/led/red/"
     return this.http.post(url,{"state":"0"},{headers: this.crearRequestHeaders()})
 }
 

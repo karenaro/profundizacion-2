@@ -1,8 +1,8 @@
 
 <ActionBar title="Mascotas Home">
     <ActionItem
-    android.systemIcon="ic_menu_back"
-    android.position = "Go Back"
+    android.systemIcon="ic_menu_rotate"
+    android.position = "right"
     (tap)="cargaincial()" text = "refrescar">
     </ActionItem>
 
@@ -30,11 +30,9 @@
                 <Label [text]="item.nacimiento"></Label>
                 <Label [text]="item.propietario._id"></Label>
                <!-- <Button text="refrescar" (tap)="cargaincial()" class="btn btn-primary"></Button>-->
-               <Button [isEnabled]="!isBusy" text="Entrada" (tap)="redOn()" class="btn btn-primary"></Button>
-               <Button [isEnabled]="!isBusy" text="Salida" (tap)="redOff()" class="btn btn-primary"></Button>
+               <Button  text="Activo" (tap)="redOn()" class="btn btn-primary"></Button>
+               <Button  text="Inactivo" (tap)="redOff()" class="btn btn-primary"></Button>
             </StackLayout>
-            <ActivityIndicator rowspan="2" [busy]="isBusy" color="black" width="100" height="100"
-                       (busyChange)="onBusyChanged($event)"></ActivityIndicator>
         </ng-template>
     </ListView>
 </GridLayout>

@@ -45,25 +45,25 @@ cargaincial(){
   }
 
   redOn(){
-      this.isBusy=true;
-      this.raspberryService.on().subscribe((result:any)=>{
-          this.alert(result.respuesta);
-          this.isBusy=false;
-      },(error)=>{
-          this.isBusy=false;
-          this.alert(error.message);
-      });
+    this.isBusy=true;
+    this.raspberryService.on().subscribe((result:any)=>{
+        console.log(result);
+        this.isBusy=false;
+        },(error)=>{
+            this.isBusy=false;
+            this.alert(error.message);
+        });
   }
 
   redOff(){
     this.isBusy=true;
     this.raspberryService.off().subscribe((result:any)=>{
-        this.alert(result.respuesta);
+        console.log(result);
         this.isBusy=false;
-    },(error)=>{
-        this.isBusy=false;
-        this.alert(error.message);
-    });
+        },(error)=>{
+            this.isBusy=false;
+            this.alert(error.message);
+        });
   }
 
 
