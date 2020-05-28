@@ -25,7 +25,7 @@ export class RaspberryService {
 
   public off(){
     let url = this.dataplicityUrl + "/led/red"
-    return this.http.post(url,{"state":"1"},{headers: this.crearRequestHeaders()})
+    return this.http.post(url,{"state":"0"},{headers: this.crearRequestHeaders()})
 }
 
 
