@@ -1,5 +1,3 @@
-<!--<Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button> -->
-
 
 <ActionBar title="Mascotas Home">
     <ActionItem
@@ -14,44 +12,22 @@
     (tap) = "salir()" text = "Salir">
     </ActionItem>
 
-    
+
 
 </ActionBar>
 
 <GridLayout>
     <ListView [items]="mascota">
-        <ng-template let-item="item">            
+        <ng-template let-item="item">
             <StackLayout>
                 <Label [text]="item.tipoMascota"></Label>
                 <Label [text]="item.nacimiento"></Label>
-                <Label [text]="item.propietario"></Label>
-                <Button text="foto" (tap)="goToCamara()" class="btn btn-primary"></Button>
-            </StackLayout>        
+                <Label [text]="item.propietario._id"></Label>
+                <Button text="refrescar" (tap)="cargaincial()" class="btn btn-primary"></Button>
+            </StackLayout>
         </ng-template>
     </ListView>
-    <Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button>
 </GridLayout>
 
 
-<!--
-<GridLayout backgroundColor="#CCCCCC">
-    <ScrollView>
-        <StackLayout margin="20" verticalAlignment="center" class="form" 
-        padding="15" backgroundColor="#FFFFFF"> 
-            <ListView [items]="animales" class="picker">
-                <ng-template let-item="item">            
-                    <StackLayout>
-                        <Label [text]="item.codigo"></Label>
-                        <Label [text]="item.tipoMascota"></Label>
-                        <Label [text]="item.nacimiento"></Label>
-                        <Label [text]="item.propietario"></Label>
-                        <Label [text]="item.vacuna"></Label>
-                    </StackLayout>        
-                </ng-template>
-            </ListView>
-            <Button text="Buscar" class="btn btn-primary"></Button> 
-        </StackLayout>
-    </ScrollView>
-</GridLayout>   
-   
--->
+

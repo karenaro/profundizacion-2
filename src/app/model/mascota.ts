@@ -1,7 +1,7 @@
 export class Mascota {
-    //codigo:string;
+    codigo:string;
     tipoMascota:string;
-    nacimiento: string; 
+    nacimiento: string;
     propietario:string;
     vacuna: string;
 }

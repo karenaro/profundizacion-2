@@ -1,10 +1,24 @@
 /* Add mobile styles for the component here.  */
-#login{
-    background-image: url('../../../App_Resources/Android/src/main/res/drawable-hdpi/fondo.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+
+    .header{
+        horizontal-align: center;
+        font-size: 25;
+        font-weight: 500;
+        margin-bottom: 15;
+        text-align: center;
+        color: #2d3a54;
+      }
+      Image {
+        width: 200;
+        height: 200;
+        margin: 30 5 30 5;
+      }
+     input{
+        font-size: 15;
+        font-weight: 200;
+        text-align: center;
+      }
 
 
 
-}
 
